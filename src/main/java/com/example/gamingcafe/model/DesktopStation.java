@@ -1,9 +1,9 @@
 ﻿package com.example.gamingcafe.model;
 
 public class DesktopStation extends Workstation {
-    String gpu;
-    String cpu;
-    String ram;
+    private String gpu;
+    private String cpu;
+    private String ram;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 

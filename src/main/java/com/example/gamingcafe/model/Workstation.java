@@ -1,11 +1,11 @@
 ﻿package com.example.gamingcafe.model;
 
 public abstract class Workstation {
-    Integer id;
-    String name;
-    Float pricePerHour;
-    Boolean isOccupied;
-    String[] games;
+    private Integer id;
+    private String name;
+    private Float pricePerHour;
+    private Boolean isOccupied;
+    private String[] games;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 

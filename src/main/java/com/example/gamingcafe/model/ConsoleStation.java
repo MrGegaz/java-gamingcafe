@@ -1,8 +1,8 @@
 ﻿package com.example.gamingcafe.model;
 
 public class ConsoleStation extends Workstation {
-    String consoleType;
-    Integer controlersCount;
+    private String consoleType;
+    private Integer controlersCount;
 
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
