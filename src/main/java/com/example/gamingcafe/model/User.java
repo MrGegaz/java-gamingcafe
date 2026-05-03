@@ -7,18 +7,16 @@ public abstract class User {
     private String lastName;
     private String email;
     private String password;
-    private String role;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public User(Integer id, Integer age, String firstName, String lastName, String email, String password, String role) {
+    public User(Integer id, Integer age, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.age = age;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.role = role;
     }
 
     /* ------------------------------ SETTERI ------------------------------ */
@@ -47,10 +45,6 @@ public abstract class User {
         this.password = password;
     }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
-
     /* ------------------------------ GETTERI ------------------------------ */
 
     public Integer getId() {
@@ -77,16 +71,12 @@ public abstract class User {
         return password;
     }
 
-    public String getRole() {
-        return role;
-    }
-
     /* ------------------------------ METODE ------------------------------ */
 
     @Override
     public String toString() {
         return "User [id=" + id + ", age=" + age + ", firstName=" + firstName
                 + ", lastName=" + lastName + ", email=" + email + ", password="
-                + password + ", role=" + role + "]";
+                + password + "]";
     }
 }
