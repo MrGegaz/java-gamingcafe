@@ -1,10 +1,10 @@
 ﻿package com.example.gamingcafe.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class User {
     private Integer id;
-    private Date birthday;
+    private LocalDate birthday;
     private String firstName;
     private String lastName;
     private String email;
@@ -12,7 +12,7 @@ public abstract class User {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public User(Integer id, Date birthday, String firstName, String lastName, String email, String password) {
+    public User(Integer id, LocalDate birthday, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.birthday = birthday;
         this.firstName = firstName;
@@ -27,7 +27,7 @@ public abstract class User {
         this.id = id;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
@@ -53,7 +53,7 @@ public abstract class User {
         return id;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
