@@ -1,9 +1,10 @@
 ﻿package com.example.gamingcafe.model;
 
 import java.util.List;
+import java.util.UUID;
 
 public abstract class Workstation implements Maintainable {
-    private Integer id;
+    private UUID id;
     private String name;
     private Double pricePerHour;
     private Boolean isOccupied;
@@ -12,7 +13,7 @@ public abstract class Workstation implements Maintainable {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public Workstation(Integer id, String name, Double pricePerHour, Boolean isOccupied, User currentUser,  List<String> games) {
+    public Workstation(UUID id, String name, Double pricePerHour, Boolean isOccupied, User currentUser,  List<String> games) {
         this.id = id;
         this.name = name;
         this.pricePerHour = pricePerHour;
@@ -23,7 +24,7 @@ public abstract class Workstation implements Maintainable {
 
     /* ------------------------------ SETTERI ------------------------------ */
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -49,7 +50,7 @@ public abstract class Workstation implements Maintainable {
 
     /* ------------------------------ GETTERI ------------------------------ */
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 

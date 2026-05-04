@@ -1,13 +1,14 @@
 ﻿package com.example.gamingcafe.model;
 
 import java.util.List;
+import java.util.UUID;
 
 public class VRStation extends Workstation{
     private Integer headsetCount;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public VRStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, User currentUser, List<String> games, Integer headsetCount) {
+    public VRStation(UUID id, String name, Double pricePerHour, Boolean isOccupied, User currentUser, List<String> games, Integer headsetCount) {
         super(id, name, pricePerHour, isOccupied, currentUser, games);
         this.headsetCount = headsetCount;
     }

@@ -3,6 +3,7 @@
 import com.example.gamingcafe.util.StaffRole;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class Staff extends User implements Discount {
     private StaffRole staffRole;
@@ -12,7 +13,7 @@ public class Staff extends User implements Discount {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public Staff(Integer id, LocalDate birthday, String firstName, String lastName, String email, String password, StaffRole staffRole, Double salary) {
+    public Staff(UUID id, LocalDate birthday, String firstName, String lastName, String email, String password, StaffRole staffRole, Double salary) {
         super(id, birthday, firstName, lastName, email, password);
         this.staffRole = staffRole;
         this.salary = salary;

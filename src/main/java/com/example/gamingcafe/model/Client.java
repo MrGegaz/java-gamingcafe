@@ -3,6 +3,7 @@
 import com.example.gamingcafe.util.ClientLevel;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class Client extends User implements Discount {
     private boolean member;
@@ -11,7 +12,7 @@ public class Client extends User implements Discount {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public Client(Integer id, LocalDate birthday, String firstName, String lastName, String email, String password, Boolean member, ClientLevel clientLevel, String gamerTag) {
+    public Client(UUID id, LocalDate birthday, String firstName, String lastName, String email, String password, Boolean member, ClientLevel clientLevel, String gamerTag) {
         super(id, birthday, firstName, lastName, email, password);
         this.member = member;
         this.clientLevel = clientLevel;

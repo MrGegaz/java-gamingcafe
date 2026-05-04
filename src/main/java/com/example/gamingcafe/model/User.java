@@ -1,9 +1,10 @@
 ﻿package com.example.gamingcafe.model;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public abstract class User {
-    private Integer id;
+    private UUID id;
     private LocalDate birthday;
     private String firstName;
     private String lastName;
@@ -12,7 +13,7 @@ public abstract class User {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public User(Integer id, LocalDate birthday, String firstName, String lastName, String email, String password) {
+    public User(UUID id, LocalDate birthday, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.birthday = birthday;
         this.firstName = firstName;
@@ -23,7 +24,7 @@ public abstract class User {
 
     /* ------------------------------ SETTERI ------------------------------ */
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -49,7 +50,7 @@ public abstract class User {
 
     /* ------------------------------ GETTERI ------------------------------ */
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
