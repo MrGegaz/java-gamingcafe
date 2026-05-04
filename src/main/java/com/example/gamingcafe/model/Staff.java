@@ -2,9 +2,9 @@
 
 import com.example.gamingcafe.util.StaffRole;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public class Staff extends User {
+public class Staff extends User implements Discount {
     private StaffRole staffRole;
     private Double salary;
 
@@ -12,7 +12,7 @@ public class Staff extends User {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public Staff(Integer id, Date birthday, String firstName, String lastName, String email, String password, StaffRole staffRole, Double salary) {
+    public Staff(Integer id, LocalDate birthday, String firstName, String lastName, String email, String password, StaffRole staffRole, Double salary) {
         super(id, birthday, firstName, lastName, email, password);
         this.staffRole = staffRole;
         this.salary = salary;
@@ -40,4 +40,7 @@ public class Staff extends User {
     /* ------------------------------ METODE ------------------------------ */
 
     // TODO: Implement necessary methods
+
+    @Override
+    public void calculateDiscount() {}
 }

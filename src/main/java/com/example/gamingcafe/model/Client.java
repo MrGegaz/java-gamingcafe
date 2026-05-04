@@ -2,16 +2,16 @@
 
 import com.example.gamingcafe.util.ClientLevel;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public class Client extends User {
+public class Client extends User implements Discount {
     private boolean member;
     private ClientLevel clientLevel;
     private String gamerTag;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public Client(Integer id, Date birthday, String firstName, String lastName, String email, String password, Boolean member, ClientLevel clientLevel,  String gamerTag) {
+    public Client(Integer id, LocalDate birthday, String firstName, String lastName, String email, String password, Boolean member, ClientLevel clientLevel, String gamerTag) {
         super(id, birthday, firstName, lastName, email, password);
         this.member = member;
         this.clientLevel = clientLevel;
@@ -46,4 +46,8 @@ public class Client extends User {
     /* ------------------------------ METODE ------------------------------ */
 
     // TODO: Implement necessary methods
+
+
+    @Override
+    public void calculateDiscount() {}
 }
