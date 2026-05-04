@@ -1,8 +1,10 @@
 ﻿package com.example.gamingcafe.model;
 
+import java.util.Date;
+
 public abstract class User {
     private Integer id;
-    private Integer age;
+    private Date birthday;
     private String firstName;
     private String lastName;
     private String email;
@@ -10,9 +12,9 @@ public abstract class User {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public User(Integer id, Integer age, String firstName, String lastName, String email, String password) {
+    public User(Integer id, Date birthday, String firstName, String lastName, String email, String password) {
         this.id = id;
-        this.age = age;
+        this.birthday = birthday;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -25,8 +27,8 @@ public abstract class User {
         this.id = id;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public void setFirstName(String firstName) {
@@ -51,8 +53,8 @@ public abstract class User {
         return id;
     }
 
-    public Integer getAge() {
-        return age;
+    public Date getBirthday() {
+        return birthday;
     }
 
     public String getFirstName() {
@@ -75,7 +77,7 @@ public abstract class User {
 
     @Override
     public String toString() {
-        return "User [id=" + id + ", age=" + age + ", firstName=" + firstName
+        return "User [id=" + id + ", age=" + birthday + ", firstName=" + firstName
                 + ", lastName=" + lastName + ", email=" + email + ", password="
                 + password + "]";
     }
