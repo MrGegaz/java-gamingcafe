@@ -2,20 +2,22 @@
 
 import java.util.List;
 
-public abstract class Workstation {
+public abstract class Workstation implements Maintainable {
     private Integer id;
     private String name;
     private Double pricePerHour;
     private Boolean isOccupied;
+    private User currentUser;
     private List<String> games;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public Workstation(Integer id, String name, Double pricePerHour, Boolean isOccupied,  List<String> games) {
+    public Workstation(Integer id, String name, Double pricePerHour, Boolean isOccupied, User currentUser,  List<String> games) {
         this.id = id;
         this.name = name;
         this.pricePerHour = pricePerHour;
         this.isOccupied = isOccupied;
+        this.currentUser = currentUser;
         this.games = games;
     }
 
@@ -35,6 +37,10 @@ public abstract class Workstation {
 
     public void setOccupied(Boolean occupied) {
         isOccupied = occupied;
+    }
+
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
     }
 
     public void setGames(List<String> games) {
@@ -57,6 +63,10 @@ public abstract class Workstation {
 
     public Boolean getOccupied() {
         return isOccupied;
+    }
+
+    public User getCurrentUser() {
+        return currentUser;
     }
 
     public List<String> getGames() {

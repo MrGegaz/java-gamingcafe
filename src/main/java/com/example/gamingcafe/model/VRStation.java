@@ -7,8 +7,8 @@ public class VRStation extends Workstation{
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public VRStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, List<String> games, Integer headsetCount) {
-        super(id, name, pricePerHour, isOccupied, games);
+    public VRStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, User currentUser, List<String> games, Integer headsetCount) {
+        super(id, name, pricePerHour, isOccupied, currentUser, games);
         this.headsetCount = headsetCount;
     }
 
@@ -27,4 +27,14 @@ public class VRStation extends Workstation{
     /* ------------------------------ METODE ------------------------------ */
 
     // TODO: Implement method for workstation reservation. Abstract class Workstation
+
+    @Override
+    public void performCleaning() {
+
+    }
+
+    @Override
+    public void performMaintenacne() {
+
+    }
 }

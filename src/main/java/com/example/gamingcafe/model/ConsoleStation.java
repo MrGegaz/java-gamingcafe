@@ -9,8 +9,8 @@ public class ConsoleStation extends Workstation {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public ConsoleStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, List<String> games, String consoleType, Integer controlersCount) {
-        super(id, name, pricePerHour, isOccupied, games);
+    public ConsoleStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, User currentUser, List<String> games, String consoleType, Integer controlersCount) {
+        super(id, name, pricePerHour, isOccupied, currentUser, games);
         this.consoleType = consoleType;
         this.controlersCount = controlersCount;
     }
@@ -38,4 +38,14 @@ public class ConsoleStation extends Workstation {
     /* ------------------------------ METODE ------------------------------ */
 
     // TODO: Implement method for workstation reservation. Abstract class Workstation
+
+    @Override
+    public void performCleaning() {
+
+    }
+
+    @Override
+    public void performMaintenacne() {
+
+    }
 }

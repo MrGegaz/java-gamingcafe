@@ -9,8 +9,8 @@ public class DesktopStation extends Workstation {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public DesktopStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, List<String> games, String gpu, String cpu, String ram) {
-        super(id, name, pricePerHour, isOccupied, games);
+    public DesktopStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, User currentUser, List<String> games, String gpu, String cpu, String ram) {
+        super(id, name, pricePerHour, isOccupied, currentUser, games);
         this.gpu = gpu;
         this.cpu = cpu;
         this.ram = ram;
@@ -47,4 +47,14 @@ public class DesktopStation extends Workstation {
     /* ------------------------------ METODE ------------------------------ */
 
     // TODO: Implement method for workstation reservation. Abstract class Workstation
+
+    @Override
+    public void performCleaning() {
+
+    }
+
+    @Override
+    public void performMaintenacne() {
+
+    }
 }
