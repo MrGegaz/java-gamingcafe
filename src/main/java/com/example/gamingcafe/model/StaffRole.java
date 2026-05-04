@@ -1,4 +1,4 @@
-﻿package com.example.gamingcafe.util;
+﻿package com.example.gamingcafe.model;
 
 public enum StaffRole {
     MANAGER,

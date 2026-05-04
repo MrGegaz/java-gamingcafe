@@ -1,7 +1,5 @@
 ﻿package com.example.gamingcafe.model;
 
-import com.example.gamingcafe.util.StaffRole;
-
 import java.time.LocalDate;
 import java.util.UUID;
 
