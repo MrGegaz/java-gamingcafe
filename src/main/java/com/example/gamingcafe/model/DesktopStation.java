@@ -1,5 +1,7 @@
 ﻿package com.example.gamingcafe.model;
 
+import java.util.List;
+
 public class DesktopStation extends Workstation {
     private String gpu;
     private String cpu;
@@ -7,7 +9,7 @@ public class DesktopStation extends Workstation {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public DesktopStation(Integer id, String name, Float pricePerHour, Boolean isOccupied, String[] games, String gpu, String cpu, String ram) {
+    public DesktopStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, List<String> games, String gpu, String cpu, String ram) {
         super(id, name, pricePerHour, isOccupied, games);
         this.gpu = gpu;
         this.cpu = cpu;

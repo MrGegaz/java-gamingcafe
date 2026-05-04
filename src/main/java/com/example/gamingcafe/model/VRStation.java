@@ -1,11 +1,13 @@
 ﻿package com.example.gamingcafe.model;
 
+import java.util.List;
+
 public class VRStation extends Workstation{
-    Integer headsetCount;
+    private Integer headsetCount;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public VRStation(Integer id, String name, Float pricePerHour, Boolean isOccupied, String[] games, Integer headsetCount) {
+    public VRStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, List<String> games, Integer headsetCount) {
         super(id, name, pricePerHour, isOccupied, games);
         this.headsetCount = headsetCount;
     }

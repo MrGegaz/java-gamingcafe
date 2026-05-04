@@ -1,15 +1,17 @@
 ﻿package com.example.gamingcafe.model;
 
+import java.util.List;
+
 public abstract class Workstation {
     private Integer id;
     private String name;
-    private Float pricePerHour;
+    private Double pricePerHour;
     private Boolean isOccupied;
-    private String[] games;
+    private List<String> games;
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public Workstation(Integer id, String name, Float pricePerHour, Boolean isOccupied,  String[] games) {
+    public Workstation(Integer id, String name, Double pricePerHour, Boolean isOccupied,  List<String> games) {
         this.id = id;
         this.name = name;
         this.pricePerHour = pricePerHour;
@@ -27,7 +29,7 @@ public abstract class Workstation {
         this.name = name;
     }
 
-    public void setPricePerHour(Float pricePerHour) {
+    public void setPricePerHour(Double pricePerHour) {
         this.pricePerHour = pricePerHour;
     }
 
@@ -35,7 +37,7 @@ public abstract class Workstation {
         isOccupied = occupied;
     }
 
-    public void setGames(String[] games) {
+    public void setGames(List<String> games) {
         this.games = games;
     }
 
@@ -49,7 +51,7 @@ public abstract class Workstation {
         return name;
     }
 
-    public Float getPricePerHour() {
+    public Double getPricePerHour() {
         return pricePerHour;
     }
 
@@ -57,7 +59,7 @@ public abstract class Workstation {
         return isOccupied;
     }
 
-    public String[] getGames() {
+    public List<String> getGames() {
         return games;
     }
 

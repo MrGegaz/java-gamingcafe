@@ -1,5 +1,7 @@
 ﻿package com.example.gamingcafe.model;
 
+import java.util.List;
+
 public class ConsoleStation extends Workstation {
     private String consoleType;
     private Integer controlersCount;
@@ -7,10 +9,10 @@ public class ConsoleStation extends Workstation {
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public ConsoleStation(Integer id, String name, Float pricePerHour, Boolean isOccupied, String[] games, String consoleType, Integer controlersNumber) {
+    public ConsoleStation(Integer id, String name, Double pricePerHour, Boolean isOccupied, List<String> games, String consoleType, Integer controlersCount) {
         super(id, name, pricePerHour, isOccupied, games);
         this.consoleType = consoleType;
-        this.controlersCount = controlersNumber;
+        this.controlersCount = controlersCount;
     }
 
     /* ------------------------------ SETTERI ------------------------------ */
