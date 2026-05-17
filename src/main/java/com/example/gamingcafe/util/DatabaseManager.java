@@ -22,9 +22,9 @@ public class DatabaseManager {
             Properties props = loadProperties();
 
             // Get db connection properties
-            String dbUrl = props.getProperty("dbUrl");
-            String dbUser = props.getProperty("dbUser");
-            String dbPassword = props.getProperty("dbPassword");
+            String dbUrl = props.getProperty("db.url");
+            String dbUser = props.getProperty("db.user");
+            String dbPassword = props.getProperty("db.password");
 
             // Connection initialization
             this.connection = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
@@ -106,9 +106,9 @@ public class DatabaseManager {
             Properties props = loadProperties();
 
             this.connection = DriverManager.getConnection(
-                    props.getProperty("dbUrl"),
-                    props.getProperty("dbUser"),
-                    props.getProperty("dbPassword")
+                    props.getProperty("db.url"),
+                    props.getProperty("db.user"),
+                    props.getProperty("db.password")
             );
             this.isConnected = true;
 
