@@ -2,5 +2,5 @@
 
 public interface Maintainable {
     void performCleaning();
-    void performMaintenacne();
+    void performMaintenance();
 }

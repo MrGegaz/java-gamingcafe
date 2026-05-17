@@ -5,15 +5,15 @@ import java.util.UUID;
 
 public class ConsoleStation extends Workstation {
     private String consoleType;
-    private Integer controlersCount;
+    private Integer controllersCount;
 
 
     /* ------------------------------ KONSTRUKTORI ------------------------------ */
 
-    public ConsoleStation(UUID id, String name, Double pricePerHour, Boolean isOccupied, User currentUser, List<String> games, String consoleType, Integer controlersCount) {
+    public ConsoleStation(UUID id, String name, Double pricePerHour, Boolean isOccupied, User currentUser, List<String> games, String consoleType, Integer controllersCount) {
         super(id, name, pricePerHour, isOccupied, currentUser, games);
         this.consoleType = consoleType;
-        this.controlersCount = controlersCount;
+        this.controllersCount = controllersCount;
     }
 
     /* ------------------------------ SETTERI ------------------------------ */
@@ -22,8 +22,8 @@ public class ConsoleStation extends Workstation {
         this.consoleType = consoleType;
     }
 
-    public void setControlersCount(Integer controlersCount) {
-        this.controlersCount = controlersCount;
+    public void setControlersCount(Integer controllersCount) {
+        this.controllersCount = controllersCount;
     }
 
     /* ------------------------------ GETTERI ------------------------------ */
@@ -33,7 +33,7 @@ public class ConsoleStation extends Workstation {
     }
 
     public Integer getControlersCount() {
-        return controlersCount;
+        return controllersCount;
     }
 
     /* ------------------------------ METODE ------------------------------ */
@@ -46,7 +46,7 @@ public class ConsoleStation extends Workstation {
     }
 
     @Override
-    public void performMaintenacne() {
+    public void performMaintenance() {
 
     }
 }
