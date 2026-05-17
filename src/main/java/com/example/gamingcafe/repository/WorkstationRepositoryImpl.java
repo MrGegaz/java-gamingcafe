@@ -1,4 +1,4 @@
-﻿package com.example.gamingcafe.repository;
+package com.example.gamingcafe.repository;
 
 import com.example.gamingcafe.model.Workstation;
 

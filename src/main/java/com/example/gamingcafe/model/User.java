@@ -1,4 +1,4 @@
-﻿package com.example.gamingcafe.model;
+package com.example.gamingcafe.model;
 
 import java.time.LocalDate;
 import java.util.UUID;

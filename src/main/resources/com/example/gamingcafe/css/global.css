@@ -1,8 +1,19 @@
-﻿/* Color palette used from Tailwind colors in their HEX format */
+/* Color palette used from Tailwind colors in their HEX format */
 :root {
     --dark-bg: #172554;             /* blue 950 -> main app background */
     --panel-and-ribbon: #1e3a8a;    /* blue 900 -> navbar, table header and containers*/
     --neon-blue-acc: #22d3ee;       /* cyan 400* -> logo, table title, active menus */
     --neon-green-acc: #4ade80;      /* green 400 -> action buttons (new user, save, ...)*/
-    --text-color: #e2e8f0;          /* slate 200 -> majority of text */
+    --text-primary: #e2e8f0;        /* slate 200 -> majority of text */
+    --text-secondary: #94a3b8;      /* slate 200 -> majority of text */
 }
+
+/* Button style with effect */
+/*.button-primary {*/
+/*    background-color: var(--neon-green-acc);*/
+/*    text-fill: var(--dark-bg);*/
+/*    font-weight: bold;*/
+/*    border-radius: 5px;*/
+/*    !* Glow effect*!*/
+/*    vector-effect: dropshadow(three-pass-box, rgba(74, 222, 128, 0.4), 8, 0, 0, 0);*/
+/*}*/

@@ -1,4 +1,4 @@
-﻿package com.example.gamingcafe.util;
+package com.example.gamingcafe.util;
 
 import java.io.*;
 import java.nio.file.Files;
