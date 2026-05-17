@@ -7,13 +7,3 @@
     --text-primary: #e2e8f0;        /* slate 200 -> majority of text */
     --text-secondary: #94a3b8;      /* slate 200 -> majority of text */
 }
-
-/* Button style with effect */
-/*.button-primary {*/
-/*    background-color: var(--neon-green-acc);*/
-/*    text-fill: var(--dark-bg);*/
-/*    font-weight: bold;*/
-/*    border-radius: 5px;*/
-/*    !* Glow effect*!*/
-/*    vector-effect: dropshadow(three-pass-box, rgba(74, 222, 128, 0.4), 8, 0, 0, 0);*/
-/*}*/
