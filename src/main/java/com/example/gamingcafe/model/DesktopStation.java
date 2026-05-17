@@ -55,7 +55,7 @@ public class DesktopStation extends Workstation {
     }
 
     @Override
-    public void performMaintenacne() {
+    public void performMaintenance() {
 
     }
 }
