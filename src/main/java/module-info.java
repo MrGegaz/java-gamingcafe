@@ -4,6 +4,7 @@ module com.example.gamingcafe {
 
     requires org.kordamp.ikonli.javafx;
     requires java.sql;
+    requires atlantafx.base;
 
     opens com.example.gamingcafe to javafx.fxml;
     opens com.example.gamingcafe.controller to javafx.fxml;

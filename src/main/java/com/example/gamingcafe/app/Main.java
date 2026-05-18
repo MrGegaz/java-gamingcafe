@@ -1,5 +1,6 @@
 package com.example.gamingcafe.app;
 
+import atlantafx.base.theme.NordDark;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,6 +12,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        Application.setUserAgentStylesheet(new NordDark().getUserAgentStylesheet());
+
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/com/example/gamingcafe/fxml/Main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Gaming Cafe");
