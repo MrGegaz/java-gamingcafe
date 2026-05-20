@@ -6,7 +6,7 @@ CREATE TABLE workstations (
     type            VARCHAR(20)  NOT NULL,  -- 'DESKTOP', 'CONSOLE', 'VR'
     price_per_hour  DECIMAL(6,2),
     is_occupied     BOOLEAN DEFAULT FALSE,
-    current_user_id UUID REFERENCES clients(id),
+    current_user_id UUID REFERENCES users(id),
     -- Desktop specific
     gpu             VARCHAR(100),
     cpu             VARCHAR(100),
