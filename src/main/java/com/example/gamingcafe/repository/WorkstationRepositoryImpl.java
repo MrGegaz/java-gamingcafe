@@ -40,15 +40,18 @@ public class WorkstationRepositoryImpl implements WorkstationRepository {
             stmt.setNull(12, Types.INTEGER);
 
             // Set only what the type has
-            if (workstation instanceof DesktopStation d) {
-                stmt.setString(7, d.getGpu());
-                stmt.setString(8, d.getCpu());
-                stmt.setString(9, d.getRam());
-            } else if (workstation instanceof ConsoleStation c) {
-                stmt.setString(10, c.getConsoleType());
-                stmt.setInt(11, c.getControlersCount());
-            } else if (workstation instanceof VRStation v) {
-                stmt.setInt(12, v.getHeadsetCount());
+            switch (workstation) {
+                case DesktopStation d -> {
+                    stmt.setString(7, d.getGpu());
+                    stmt.setString(8, d.getCpu());
+                    stmt.setString(9, d.getRam());
+                }
+                case ConsoleStation c -> {
+                    stmt.setString(10, c.getConsoleType());
+                    stmt.setInt(11, c.getControlersCount());
+                }
+                case VRStation v -> stmt.setInt(12, v.getHeadsetCount());
+                default -> {}
             }
 
             stmt.executeUpdate();
@@ -82,15 +85,19 @@ public class WorkstationRepositoryImpl implements WorkstationRepository {
             stmt.setNull(11, Types.INTEGER);
 
             // Set only what the type has
-            if (workstation instanceof DesktopStation d) {
-                stmt.setString(6, d.getGpu());
-                stmt.setString(7, d.getCpu());
-                stmt.setString(8, d.getRam());
-            } else if (workstation instanceof ConsoleStation c) {
-                stmt.setString(9, c.getConsoleType());
-                stmt.setInt(10, c.getControlersCount());
-            } else if (workstation instanceof VRStation v) {
-                stmt.setInt(11, v.getHeadsetCount());
+            switch (workstation) {
+                case DesktopStation d -> {
+                    stmt.setString(6, d.getGpu());
+                    stmt.setString(7, d.getCpu());
+                    stmt.setString(8, d.getRam());
+                }
+                case ConsoleStation c -> {
+                    stmt.setString(9, c.getConsoleType());
+                    stmt.setInt(10, c.getControlersCount());
+                }
+                case VRStation v -> stmt.setInt(11, v.getHeadsetCount());
+                default -> {
+                }
             }
 
             stmt.setObject(12, workstation.getId());
@@ -150,9 +157,9 @@ public class WorkstationRepositoryImpl implements WorkstationRepository {
 
     private String resolveType(Workstation workstation) {
         return switch (workstation) {
-            case DesktopStation d -> "DESKTOP";
-            case ConsoleStation c -> "CONSOLE";
-            case VRStation v      -> "VR";
+            case DesktopStation desktop -> "DESKTOP";
+            case ConsoleStation console -> "CONSOLE";
+            case VRStation vrstation -> "VR";
             default -> throw new IllegalArgumentException("Unknown workstation type");
         };
     }
