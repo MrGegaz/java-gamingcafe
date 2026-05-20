@@ -3,6 +3,7 @@ module com.example.gamingcafe {
     requires javafx.fxml;
 
     requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.materialdesign2;
     requires java.sql;
     requires atlantafx.base;
 
