@@ -2,7 +2,7 @@
 
 A JavaFX desktop application for managing a gaming cafe - clients, staff, and workstations (desktop PCs, consoles, VR setups).
 
-Built with Java, JavaFX, and PostgreSQL using an MVC + Repository architecture. ~~Dark-themed UI powered by~~ [~~AtlantaFX~~](https://github.com/mkpaz/atlantafx).
+Built with Java, JavaFX, and PostgreSQL using an MVC + Repository architecture. Dark-themed UI powered by [AtlantaFX](https://github.com/mkpaz/atlantafx).
 
 ## Tech Stack
 
@@ -32,7 +32,7 @@ Create a PostgreSQL database, then run the SQL scripts to set up the schema:
 
 ```bash
 psql -U your_username -d your_database_name -f src/main/resources/db/users.sql
-psql -U your_username -d your_database_name -f src/main/resources/db/workstation.sql
+psql -U your_username -d your_database_name -f src/main/resources/db/workstations.sql
 ```
 
 **3. Configure database connection**
