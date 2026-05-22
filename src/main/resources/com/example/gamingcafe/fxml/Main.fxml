@@ -39,25 +39,22 @@
             </VBox>
 
             <!-- Nav items -->
-            <Button text="POČETNA" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12">
+            <Button fx:id="navMain" text="POČETNA" styleClass="nav-button-active" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12" onAction="#onNavMain">
                 <graphic><FontIcon iconLiteral="mdi2h-home" iconSize="18" /></graphic>
             </Button>
-            <Button text="RAČUNALA" styleClass="nav-button-active" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12" fx:id="navWorkstations">
+            <Button fx:id="navWorkstations" text="RAČUNALA" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12" onAction="#onNavWorkstations">
                 <graphic><FontIcon iconLiteral="mdi2m-monitor" iconSize="18" /></graphic>
             </Button>
-            <Button text="REZERVACIJE" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12">
+            <Button fx:id="navReservation" text="REZERVACIJE" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12" disable="true">
                 <graphic><FontIcon iconLiteral="mdi2c-calendar" iconSize="18" /></graphic>
             </Button>
-            <Button text="ČLANOVI" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12">
+            <Button fx:id="navClients" text="ČLANOVI" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12" disable="true">
                 <graphic><FontIcon iconLiteral="mdi2a-account-multiple" iconSize="18" /></graphic>
-            </Button>
-            <Button text="PONUDA" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12">
-                <graphic><FontIcon iconLiteral="mdi2g-gamepad" iconSize="18" /></graphic>
             </Button>
 
             <Region VBox.vgrow="ALWAYS" />
 
-            <Button text="POSTAVKE" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12">
+            <Button fx:id="navSettings" text="POSTAVKE" styleClass="nav-button" maxWidth="Infinity" contentDisplay="LEFT" graphicTextGap="12" disable="true">
                 <graphic><FontIcon iconLiteral="mdi2c-cog" iconSize="18" /></graphic>
             </Button>
 
@@ -70,63 +67,7 @@
 
     <!-- CENTER: Content area + Detail panel -->
     <center>
-        <BorderPane>
-
-            <!-- Main content -->
-            <center>
-                <VBox styleClass="content-area" spacing="15">
-                    <padding><Insets top="20" right="20" bottom="20" left="20" /></padding>
-
-                    <Label text="RAČUNALA" styleClass="section-title" />
-
-                    <!-- Action toolbar -->
-                    <HBox spacing="10" alignment="CENTER_LEFT">
-                        <Button text="NOVO RAČUNALO" styleClass="action-button-green" fx:id="btnNew" />
-                        <Button text="UREDI" styleClass="action-button" fx:id="btnEdit" />
-                        <Button text="OBRIŠI" styleClass="action-button" fx:id="btnDelete" />
-                        <Region HBox.hgrow="ALWAYS" />
-                        <TextField fx:id="searchField" promptText="Pretraži..." prefWidth="200" />
-                    </HBox>
-
-                    <!-- Workstation table -->
-                    <TableView fx:id="workstationTable" VBox.vgrow="ALWAYS">
-                        <columns>
-                            <TableColumn fx:id="idColumn" text="ID" prefWidth="60" />
-                            <TableColumn fx:id="nameColumn" text="Naziv" prefWidth="150" />
-                            <TableColumn fx:id="typeColumn" text="Tip" prefWidth="120" />
-                            <TableColumn fx:id="statusColumn" text="Status" prefWidth="100" />
-                            <TableColumn fx:id="priceColumn" text="Cijena/h" prefWidth="90" />
-                        </columns>
-                    </TableView>
-                </VBox>
-            </center>
-
-            <!-- Detail panel -->
-            <right>
-                <VBox styleClass="detail-panel" spacing="10" minWidth="220" prefWidth="250">
-                    <padding><Insets top="20" right="15" bottom="20" left="15" /></padding>
-
-                    <Label text="DETALJI RAČUNALA:" styleClass="detail-header" />
-                    <Label fx:id="detailTitle" text="—" styleClass="detail-title" />
-
-                    <Label text="Naziv:" styleClass="form-label" />
-                    <TextField fx:id="detailName" maxWidth="Infinity" />
-
-                    <Label text="Tip:" styleClass="form-label" />
-                    <ComboBox fx:id="detailType" maxWidth="Infinity" />
-
-                    <Label text="Status:" styleClass="form-label" />
-                    <ComboBox fx:id="detailStatus" maxWidth="Infinity" />
-
-                    <Label text="Cijena/h:" styleClass="form-label" />
-                    <TextField fx:id="detailPrice" maxWidth="Infinity" />
-
-                    <Region VBox.vgrow="ALWAYS" />
-
-                    <Button fx:id="btnSave" text="SPREMI" styleClass="save-button" maxWidth="Infinity" />
-                    <Button fx:id="btnCancel" text="ODUSTANI" styleClass="cancel-button" maxWidth="Infinity" />
-                </VBox>
-            </right>
+        <BorderPane fx:id="contentArea">
 
         </BorderPane>
     </center>

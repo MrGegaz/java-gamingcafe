@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.gamingcafe.controller.WorkstationsController"
+            prefHeight="400.0" prefWidth="600.0" >
+
+    <!-- Main content -->
+    <center>
+        <VBox styleClass="content-area" spacing="15">
+            <padding><Insets top="20" right="20" bottom="20" left="20" /></padding>
+
+            <Label text="RAČUNALA" styleClass="section-title" />
+
+            <!-- Action toolbar -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button text="NOVO RAČUNALO" styleClass="action-button-green" fx:id="btnNew" onAction="#onBtnNew" />
+                <Button text="UREDI" styleClass="action-button" fx:id="btnEdit" onAction="#onBtnEdit" />
+                <Button text="OBRIŠI" styleClass="action-button" fx:id="btnDelete" onAction="#onBtnDelete" />
+                <Region HBox.hgrow="ALWAYS" />
+                <TextField fx:id="searchField" promptText="Pretraži..." prefWidth="200" />
+            </HBox>
+
+            <!-- Workstation table -->
+            <TableView fx:id="workstationTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="60" />
+                    <TableColumn fx:id="nameColumn" text="Naziv" prefWidth="150" />
+                    <TableColumn fx:id="typeColumn" text="Tip" prefWidth="120" />
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="100" />
+                    <TableColumn fx:id="priceColumn" text="Cijena/h" prefWidth="90" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Detail panel -->
+    <right>
+        <VBox styleClass="detail-panel" spacing="10" minWidth="220" prefWidth="250">
+            <padding><Insets top="20" right="15" bottom="20" left="15" /></padding>
+
+            <Label text="DETALJI RAČUNALA:" styleClass="detail-header" />
+            <Label fx:id="detailTitle" text="—" styleClass="detail-title" />
+
+            <Label text="Naziv:" styleClass="form-label" />
+            <TextField fx:id="detailName" maxWidth="Infinity" />
+
+            <Label text="Tip:" styleClass="form-label" />
+            <ComboBox fx:id="detailType" maxWidth="Infinity" />
+
+            <Label text="Status:" styleClass="form-label" />
+            <ComboBox fx:id="detailStatus" maxWidth="Infinity" />
+
+            <Label text="Cijena/h:" styleClass="form-label" />
+            <TextField fx:id="detailPrice" maxWidth="Infinity" />
+
+            <Region VBox.vgrow="ALWAYS" />
+
+            <Button fx:id="btnSave" text="SPREMI" styleClass="save-button" maxWidth="Infinity" onAction="#onBtnSave" />
+            <Button fx:id="btnCancel" text="ODUSTANI" styleClass="cancel-button" maxWidth="Infinity" onAction="#onBtnCancel" />
+        </VBox>
+    </right>
+
+</BorderPane>
